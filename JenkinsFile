@@ -13,20 +13,24 @@ pipeline {
             steps {
                 sshagent(['DADI']) {
                     sh '''
-                    ssh jenkins@20.2.249.184 << 'EOF'
+                    ssh jenkins@20.2.249.184 " 
+
                     # Change to the project directory
                     cd /opt/new/juvarya/
                     
-                    # List the contents
-                    echo "Contents of $(pwd):"
+                    # List the contents of the directory
+                    echo 'Contents of $(pwd):'
                     ls -l
                     
                     # Pull the latest code from the main branch
                     git pull origin main
                     
-                    # Run Maven clean install (uncomment if needed)
-                    # mvn clean install
-                    EOF
+                    # Change to the directory where pom.xml is located
+                    cd dadi/
+                    
+                    # Run Maven clean install
+                    mvn clean install
+                    "
                     '''
                 }
             }
