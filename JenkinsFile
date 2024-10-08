@@ -15,7 +15,7 @@ pipeline {
                     sh '''
                     ssh jenkins@20.2.249.184 << 'EOF'
                     # Change to the project directory
-                    cd /opt/new/juvarya/dadi/commonservices
+                    cd /opt/new/juvarya/
                     
                     # List the contents of the directory
                     echo "Contents of $(pwd):"
@@ -25,7 +25,7 @@ pipeline {
                     git pull origin main
                     
                     # Run Maven clean install
-                    mvn clean install
+                    // mvn clean install
                     
                     # Run the deployment script if it exists
                     if [ -f ./deploy.sh ]; then
