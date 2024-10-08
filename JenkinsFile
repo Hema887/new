@@ -15,7 +15,7 @@ pipeline {
                     sh '''
                     ssh jenkins@20.2.249.184 << 'EOF'
                     # Change to the project directory
-                    cd /opt/new/juvarya/dadi
+                    cd /opt/new/juvarya/dadi/commonservices
                     
                     # List the contents of the directory
                     echo "Contents of $(pwd):"
