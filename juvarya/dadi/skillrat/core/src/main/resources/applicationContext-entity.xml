@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+						http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+						http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<!-- This file will contain bean overrides for extensions of Broadleaf
+	entities -->
+	<!-- For example, if you have a custom class that extends CustomerImpl, you
+	would note that here -->
+
+	<bean id="com.community.core.catalog.domain.JTCategory"
+		class="com.community.core.catalog.domain.impl.JTCategoryImpl" />
+	<bean id="org.broadleafcommerce.profile.core.domain.Customer"
+		class="com.community.core.catalog.domain.impl.JTCustomerImpl" />
+	<bean id="org.broadleafcommerce.core.catalog.domain.Product"
+		class="com.community.core.catalog.domain.impl.JTProductImpl" />
+	<bean id="com.community.core.catalog.domain.JTRole"
+		class="com.community.core.catalog.domain.impl.JTRoleImpl" />
+	<bean id="com.community.core.catalog.domain.JTUserOTP"
+		class="com.community.core.catalog.domain.impl.JTUserOTPImpl" />
+	<bean id="com.community.core.catalog.domain.JTZipcode"
+		class="com.community.core.catalog.domain.impl.JTZipcodeImpl" />
+	<bean id="com.community.core.catalog.domain.Media"
+		class="com.community.core.catalog.domain.impl.MediaModel" />
+	<bean id="org.broadleafcommerce.core.store.domain.Store"
+		class="com.community.core.catalog.domain.impl.JTStoreImpl" />
+	<bean id="com.community.core.catalog.domain.JTCustomerRole"
+		class="com.community.core.catalog.domain.impl.JTCustomerRoleImpl" />
+	<bean id="com.community.core.catalog.domain.JTProductToMedia"
+		class="com.community.core.catalog.domain.impl.JTProductToMediaImpl" />
+	<bean id="com.community.core.catalog.domain.JTCategoryToMedia"
+		class="com.community.core.catalog.domain.impl.JTCategoryToMediaImpl" />
+	<bean id="com.community.core.catalog.domain.JTCustomerLastLogin"
+		class="com.community.core.catalog.domain.impl.JTCustomerLastLoginImpl" />
+<bean id="com.community.core.catalog.domain.impl.JTProductWishlist"
+		class="com.community.core.catalog.domain.impl.JTProductWishlistImpl" />
+
+
+</beans>
