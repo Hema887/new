@@ -21,7 +21,7 @@ pipeline {
                     echo "Contents of $(pwd):"
                     ls -l
                     
-                    # Pull the latest code from the main branch
+                    # Pull the latest code
                     git pull origin main
                     
                     # Run Maven clean install (uncomment if needed)
