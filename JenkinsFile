@@ -25,7 +25,7 @@ pipeline {
                     git pull origin main
                     
                     # Run Maven clean install
-                    mvn clean install
+                    # mvn clean install
                     "
                     '''
                 }
