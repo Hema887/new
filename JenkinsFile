@@ -11,7 +11,7 @@ pipeline {
 
         stage('Deploy to VM') {
             steps {
-                sshagent(['978b3b65-6239-417d-9342-27ff2c295582']) {
+                sshagent(['DADI']) {
                     sh '''
                     ssh jenkins@20.2.249.184 << 'EOF'
                     # Change to the project directory
