@@ -27,9 +27,6 @@ pipeline {
                     # Run Maven clean install
                     // mvn clean install
                     
-                    # Run the deployment script if it exists
-                    if [ -f ./deploy.sh ]; then
-                        ./deploy.sh
                     else
                         echo "deploy.sh not found!"
                         exit 1
