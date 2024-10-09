@@ -22,10 +22,8 @@ pipeline {
                     
                     git pull origin main
                     
-                    # Change to the directory where pom.xml is located
                     cd dadi/
                     
-                    # Run Maven clean install
                     mvn clean install
                     "
                     '''
