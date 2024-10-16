@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // Pull the latest code from GitHub
+                // Pull the latest code from
                 git branch: 'main', credentialsId: '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', url: 'https://github.com/Hema887/new.git'
             }
         }
