@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // Pull the latest code from GitHub using the updated credentials
+                // Pull the latest code from
                 git branch: 'main', credentialsId: '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', url: 'https://github.com/Hema887/new.git'
             }
         }
@@ -14,17 +14,16 @@ pipeline {
                 sshagent(['DADI']) {
                     sh '''
                     ssh jenkins@20.2.249.184 " 
-                    # Change to the project directory
+
                     cd /opt/new/juvarya/
                     
-                    # List the contents of the directory
                     echo 'Contents of $(pwd):'
                     ls -l
                     
-                    # Pull the latest code from the main branch
                     git pull origin main
                     
-                    # Run Maven clean install
+                    cd dadi/
+                    
                     mvn clean install
                     "
                     '''

@@ -157,7 +157,7 @@ public class AuthController {
 		loggedInUser.setEmail(user.getEmail());
 		loggedInUser.setId(user.getId());
 		loggedInUser.setPrimaryContact(user.getPrimaryContact());
-		loggedInUser.setFullName(user.getFullName());
+//		loggedInUser.setFullName(user.getFullName());
 		List<String> roles = user.getRoles().stream().map(role -> role.getName().name()).collect(Collectors.toList());
 		loggedInUser.setRoles(new HashSet<>(roles));
 		return loggedInUser;
@@ -189,11 +189,11 @@ public class AuthController {
 			}
 
 			if (user.isPresent()) {
-				loggedInUser.setNewUser(Boolean.TRUE);
+//				loggedInUser.setNewUser(Boolean.TRUE);
 
 				if (null != user.get().getFullName()) {
-					loggedInUser.setNewUser(Boolean.FALSE);
-					loggedInUser.setFullName(user.get().getFullName());
+//					loggedInUser.setNewUser(Boolean.FALSE);
+//					loggedInUser.setFullName(user.get().getFullName());
 				}
 
 				if (null != user.get().getDateOfBirth()) {
@@ -217,7 +217,7 @@ public class AuthController {
 				}
 
 				if (null != user.get().getEmail()) {
-					loggedInUser.setNewUser(Boolean.FALSE);
+//					loggedInUser.setNewUser(Boolean.FALSE);
 					loggedInUser.setEmail(user.get().getEmail());
 				}
 
